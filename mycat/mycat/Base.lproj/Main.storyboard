@@ -41,63 +41,59 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-15-Q01">
-                                <rect key="frame" x="30" y="435" width="150" height="40"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="YtC-Lu-SVO"/>
-                                    <constraint firstAttribute="height" constant="40" id="m1D-w7-JmM"/>
-                                </constraints>
-                                <state key="normal" title="회원가입">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dGs-g5-wTB" kind="show" id="Nbt-g1-H9e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-G2-Oql">
-                                <rect key="frame" x="195" y="435" width="150" height="40"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cDF-eI-AOJ"/>
-                                    <constraint firstAttribute="height" constant="40" id="nWu-YA-UDF"/>
-                                </constraints>
-                                <state key="normal" title="로그인">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="WPh-y7-fSn" kind="presentation" id="8lb-3o-y3v"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cat_register" translatesAutoresizingMaskIntoConstraints="NO" id="tRf-HY-IEm">
                                 <rect key="frame" x="30" y="100" width="315" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="swx-tt-9Ye"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tx-AH-9Z9">
+                                <rect key="frame" x="30" y="436" width="315" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xoQ-Se-Bhm"/>
+                                </constraints>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoM-m3-Vpo">
+                                <rect key="frame" x="161" y="546" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="회원가입">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dGs-g5-wTB" kind="show" id="vGs-Np-Nuw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wRb-G2-Oql" firstAttribute="top" secondItem="oOi-3B-c7n" secondAttribute="bottom" constant="15" id="4f7-jx-y9L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wRb-G2-Oql" secondAttribute="trailing" constant="30" id="Mqw-B9-Ilz"/>
+                            <constraint firstItem="9tx-AH-9Z9" firstAttribute="leading" secondItem="oOi-3B-c7n" secondAttribute="leading" id="Rdn-Iv-A03"/>
                             <constraint firstItem="oOi-3B-c7n" firstAttribute="top" secondItem="tRf-HY-IEm" secondAttribute="bottom" constant="20" id="S9s-WJ-jUe"/>
-                            <constraint firstItem="7FT-15-Q01" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VXZ-xg-DUT"/>
+                            <constraint firstItem="tRf-HY-IEm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="UnI-rU-45I"/>
                             <constraint firstItem="oOi-3B-c7n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cMg-LX-itE"/>
-                            <constraint firstItem="oOi-3B-c7n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="eNT-L8-ZyG"/>
+                            <constraint firstItem="9tx-AH-9Z9" firstAttribute="top" secondItem="oOi-3B-c7n" secondAttribute="bottom" constant="16" id="dbO-FR-xXJ"/>
+                            <constraint firstItem="9tx-AH-9Z9" firstAttribute="trailing" secondItem="oOi-3B-c7n" secondAttribute="trailing" id="e1V-Fm-N8z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oOi-3B-c7n" secondAttribute="trailing" constant="30" id="fv5-um-08G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tRf-HY-IEm" secondAttribute="trailing" constant="30" id="jpj-Cd-6Rb"/>
-                            <constraint firstItem="7FT-15-Q01" firstAttribute="top" secondItem="oOi-3B-c7n" secondAttribute="bottom" constant="15" id="p9t-H2-J4x"/>
                             <constraint firstItem="tRf-HY-IEm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qrl-xf-X4a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginBtn" destination="wRb-G2-Oql" id="sB5-TL-2YS"/>
-                        <outlet property="registerBtn" destination="7FT-15-Q01" id="cpP-3Q-t2h"/>
+                        <outlet property="idTextField" destination="nlR-gp-25M" id="WHX-Hz-uGy"/>
+                        <outlet property="loginBtn" destination="9tx-AH-9Z9" id="ijx-VJ-U2J"/>
+                        <outlet property="logoImage" destination="tRf-HY-IEm" id="6tH-GD-UG9"/>
+                        <outlet property="pwTextField" destination="hEr-kV-DLb" id="ibD-x3-3BL"/>
+                        <outlet property="registerBtn" destination="zoM-m3-Vpo" id="UlM-bq-goC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="669.60000000000002" y="26.53673163418291"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Wmo-QH-nRn">
