@@ -27,27 +27,32 @@ class LoginViewController: UIViewController {
         self.view.addSubview(loginBtn)
         self.view.addSubview(registerBtn)
         
+       setLayout()
+        
+    }
+    
+    func setLayout(){
         logoImage.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
             make.height.equalTo(200)
             make.top.equalTo(self.view.snp_topMargin).offset(75)
         }
-
+        
         idTextField.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
             make.height.equalTo(45)
             make.top.equalTo(logoImage.snp_bottomMargin).offset(25)
         }
-
+        
         pwTextField.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
             make.height.equalTo(45)
             make.top.equalTo(idTextField.snp_bottomMargin).offset(25)
         }
-
+        
         loginBtn.snp.makeConstraints { (make) in
             loginBtn.layer.cornerRadius = 10.0
             make.leading.equalTo(self.view).offset(20)
@@ -63,7 +68,6 @@ class LoginViewController: UIViewController {
             make.height.equalTo(45)
             make.bottom.equalTo(self.view.snp_bottomMargin).offset(-75)
         }
-        
     }
     
 

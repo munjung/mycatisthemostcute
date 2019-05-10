@@ -19,6 +19,7 @@
 		B8F902002282E6F100D5F500 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F901FF2282E6F100D5F500 /* ContentViewController.swift */; };
 		B8F902022282E6FA00D5F500 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F902012282E6FA00D5F500 /* WriteViewController.swift */; };
 		B8F902042282E70300D5F500 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F902032282E70300D5F500 /* MypageViewController.swift */; };
+		B8F9020C2285680600D5F500 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9020B2285680600D5F500 /* ContentCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B8F901FF2282E6F100D5F500 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		B8F902012282E6FA00D5F500 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		B8F902032282E70300D5F500 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		B8F9020B2285680600D5F500 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				940DEB269A5C17A6C311A698 /* Pods-mycat.debug.xcconfig */,
 				8ECB8D0492F22DA3CDB61FDA /* Pods-mycat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +84,7 @@
 		B8F901DA2280867F00D5F500 /* mycat */ = {
 			isa = PBXGroup;
 			children = (
+				B8F9020A228567EB00D5F500 /* collection */,
 				B8F902062282E88900D5F500 /* tabBar */,
 				B8F901FB2281CB0100D5F500 /* controller */,
 				B8F901DB2280867F00D5F500 /* AppDelegate.swift */,
@@ -113,6 +115,14 @@
 				B8F901FC2282E65D00D5F500 /* MainTabBarViewController.swift */,
 			);
 			path = tabBar;
+			sourceTree = "<group>";
+		};
+		B8F9020A228567EB00D5F500 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				B8F9020B2285680600D5F500 /* ContentCollectionViewCell.swift */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		E92F88CE9F7326B8F7EF67D3 /* Frameworks */ = {
@@ -251,6 +261,7 @@
 				B8F901FA2281CAFC00D5F500 /* MainViewController.swift in Sources */,
 				B8F902022282E6FA00D5F500 /* WriteViewController.swift in Sources */,
 				B8F902042282E70300D5F500 /* MypageViewController.swift in Sources */,
+				B8F9020C2285680600D5F500 /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
