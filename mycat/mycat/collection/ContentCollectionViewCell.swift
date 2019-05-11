@@ -10,6 +10,4 @@ import UIKit
 
 class ContentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var catImages: UIImageView!
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var contentLabel: UILabel!
 }

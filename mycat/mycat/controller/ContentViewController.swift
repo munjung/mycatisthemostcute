@@ -9,10 +9,14 @@
 import UIKit
 import SnapKit
 
-class ContentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
+class ContentViewController: UIViewController{
     
     @IBOutlet weak var collectionView: UICollectionView!
-    let cellIdentifler: String  = "Contentcell"
+    let cellIdentifler: String  = "ContentCell"
+    let images = [
+        UIImage(named: "cat_register"), UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image"),UIImage(named: "cat_register")
+    ,UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +27,15 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
             make.top.equalTo(self.view)
             make.bottom.equalTo(self.view)
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifler, for: indexPath)
         
-        return cell
+        if let layout = collectionView.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+ 
     }
+    
+  
     
 
     /*
@@ -46,4 +48,39 @@ class ContentViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     */
 
+}
+
+extension ContentViewController:PinterestLayoutDelegate{
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let image = images[indexPath.row]
+        let height = image?.size.height
+        return height!
+
+    }
+
+}
+
+//extension ContentViewController:UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let numberOfColumns: CGFloat = 2
+//        let width = collectionView.frame.size.width
+//        let xInsets: CGFloat = 10
+//        let cellSpacing:CGFloat = 5
+//        let image = images[indexPath.row]
+//        let height = image!.size.height
+//        return CGSize(width: (width/numberOfColumns)-(xInsets+cellSpacing), height: height)
+//    }
+//}
+extension ContentViewController:UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: ContentCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifler, for: indexPath) as! ContentCollectionViewCell
+        cell.catImages.image = images[indexPath.item]
+        cell.layer.cornerRadius = 10.0
+        
+        return cell
+    }
 }
