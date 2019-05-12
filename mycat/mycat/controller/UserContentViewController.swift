@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 class UserContentViewController: UIViewController,UIScrollViewDelegate {
 
     @IBOutlet weak var backBtn: UIBarButtonItem!
@@ -22,7 +22,9 @@ class UserContentViewController: UIViewController,UIScrollViewDelegate {
         setupSlideScrollView(contents: contents)
         pageControl.numberOfPages = contents.count
         pageControl.currentPage = 0
+        
         self.view.bringSubviewToFront(pageControl)
+        
         
         // Do any additional setup after loading the view.
     }
