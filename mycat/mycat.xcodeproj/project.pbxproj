@@ -10,6 +10,9 @@
 		1C9AA96CBF0BB262CDF84ED6 /* Pods_mycat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022D19C12BD17065035003C9 /* Pods_mycat.framework */; };
 		B87363332286A7F600274E71 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363322286A7F600274E71 /* PinterestLayout.swift */; };
 		B87363352287C5E800274E71 /* Jalnan.otf in Resources */ = {isa = PBXBuildFile; fileRef = B87363342287C5DE00274E71 /* Jalnan.otf */; };
+		B87363372287EF9400274E71 /* UserContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363362287EF9400274E71 /* UserContentViewController.swift */; };
+		B873633A228803D000274E71 /* Content.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8736339228803D000274E71 /* Content.xib */; };
+		B873633C2288043300274E71 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873633B2288043300274E71 /* Content.swift */; };
 		B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F901DB2280867F00D5F500 /* AppDelegate.swift */; };
 		B8F901E12280867F00D5F500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901DF2280867F00D5F500 /* Main.storyboard */; };
 		B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901E42280868000D5F500 /* LaunchScreen.storyboard */; };
@@ -30,6 +33,9 @@
 		940DEB269A5C17A6C311A698 /* Pods-mycat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mycat.debug.xcconfig"; path = "Target Support Files/Pods-mycat/Pods-mycat.debug.xcconfig"; sourceTree = "<group>"; };
 		B87363322286A7F600274E71 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
 		B87363342287C5DE00274E71 /* Jalnan.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Jalnan.otf; path = ../../../Downloads/Jalnan.otf; sourceTree = "<group>"; };
+		B87363362287EF9400274E71 /* UserContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentViewController.swift; sourceTree = "<group>"; };
+		B8736339228803D000274E71 /* Content.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Content.xib; sourceTree = "<group>"; };
+		B873633B2288043300274E71 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		B8F901D82280867F00D5F500 /* mycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F901DB2280867F00D5F500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F901E02280867F00D5F500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +73,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B8736338228803C000274E71 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B8736339228803D000274E71 /* Content.xib */,
+				B873633B2288043300274E71 /* Content.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B8F901CF2280867F00D5F500 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,7 @@
 		B8F901DA2280867F00D5F500 /* mycat */ = {
 			isa = PBXGroup;
 			children = (
+				B8736338228803C000274E71 /* view */,
 				B87363342287C5DE00274E71 /* Jalnan.otf */,
 				B8F9020A228567EB00D5F500 /* collection */,
 				B8F902062282E88900D5F500 /* tabBar */,
@@ -110,6 +126,7 @@
 				B8F901F72281C2E200D5F500 /* RegisterViewController.swift */,
 				B8F901F92281CAFC00D5F500 /* MainViewController.swift */,
 				B8F901F12281B89D00D5F500 /* LoginViewController.swift */,
+				B87363362287EF9400274E71 /* UserContentViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -201,6 +218,7 @@
 			files = (
 				B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */,
 				B87363352287C5E800274E71 /* Jalnan.otf in Resources */,
+				B873633A228803D000274E71 /* Content.xib in Resources */,
 				B8F901F62281BF5D00D5F500 /* Assets.xcassets in Resources */,
 				B8F901E12280867F00D5F500 /* Main.storyboard in Resources */,
 			);
@@ -269,7 +287,9 @@
 				B8F901FA2281CAFC00D5F500 /* MainViewController.swift in Sources */,
 				B8F902022282E6FA00D5F500 /* WriteViewController.swift in Sources */,
 				B8F902042282E70300D5F500 /* MypageViewController.swift in Sources */,
+				B87363372287EF9400274E71 /* UserContentViewController.swift in Sources */,
 				B8F9020C2285680600D5F500 /* ContentCollectionViewCell.swift in Sources */,
+				B873633C2288043300274E71 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

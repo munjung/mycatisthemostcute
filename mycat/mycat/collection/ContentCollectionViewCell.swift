@@ -9,5 +9,6 @@
 import UIKit
 
 class ContentCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var catImages: UIImageView!
 }

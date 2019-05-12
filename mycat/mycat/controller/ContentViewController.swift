@@ -14,9 +14,13 @@ class ContentViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
     let cellIdentifler: String  = "ContentCell"
     let images = [
-        UIImage(named: "cat_register"), UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image"),UIImage(named: "cat_register")
-    ,UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image"),UIImage(named: "cat_register"),UIImage(named: "cat_image")
+        UIImage(named: "ex02"), UIImage(named: "ex01"),UIImage(named: "ex03"),UIImage(named: "ex04"),UIImage(named: "ex05")
+    ,UIImage(named: "ex06"),UIImage(named: "ex07"),UIImage(named: "ex08"),UIImage(named: "ex09"),UIImage(named: "ex10")
     ]
+    
+    let userimages = [UIImage(named: "user"),UIImage(named: "main_cat"),UIImage(named: "main_cat")
+    ,UIImage(named: "main_cat"),UIImage(named: "main_cat"),UIImage(named: "main_cat"),
+     UIImage(named: "main_cat"),UIImage(named: "main_cat"),UIImage(named: "main_cat"),UIImage(named: "main_cat")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

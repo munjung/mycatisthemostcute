@@ -12,8 +12,9 @@ import SnapKit
 class LoginViewController: UIViewController {
 
 
-    @IBOutlet weak var logoLabel: UILabel!
-    @IBOutlet weak var logoLabel_2: UILabel!
+//    @IBOutlet weak var logoLabel: UILabel!
+//    @IBOutlet weak var logoLabel_2: UILabel!
+    @IBOutlet weak var logoTitle: UIImageView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -23,8 +24,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(logoLabel)
-        self.view.addSubview(logoLabel_2)
+//        self.view.addSubview(logoLabel)
+//        self.view.addSubview(logoLabel_2)
+        self.view.addSubview(logoTitle)
         self.view.addSubview(logoImage)
         self.view.addSubview(idTextField)
         self.view.addSubview(pwTextField)
@@ -38,7 +40,7 @@ class LoginViewController: UIViewController {
     
     func setLayout(){
         
-        let strokeTextAttributes = [ //232,165,75
+        /*let strokeTextAttributes = [ //232,165,75
             NSAttributedString.Key.strokeColor : UIColor(red: 232.0/255, green: 165.0/255, blue: 75.0/255, alpha: 1.0),
             NSAttributedString.Key.foregroundColor : UIColor.white,
             NSAttributedString.Key.strokeWidth : 8.0]
@@ -57,8 +59,13 @@ class LoginViewController: UIViewController {
             make.leading.equalTo(self.view).offset(25)
             make.trailing.equalTo(self.view).offset(-25)
             make.top.equalTo(self.logoLabel.snp_bottomMargin).offset(15)
+        }*/
+        logoTitle.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.view).offset(70)
+            make.trailing.equalTo(self.view).offset(-70)
+            make.height.equalTo(150)
+            make.top.equalTo(self.view.snp_topMargin).offset(15)
         }
-        
         logoImage.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
