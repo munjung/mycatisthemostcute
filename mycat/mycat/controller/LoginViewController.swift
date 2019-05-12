@@ -12,6 +12,8 @@ import SnapKit
 class LoginViewController: UIViewController {
 
 
+    @IBOutlet weak var logoLabel: UILabel!
+    @IBOutlet weak var logoLabel_2: UILabel!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
@@ -21,29 +23,54 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addSubview(logoLabel)
+        self.view.addSubview(logoLabel_2)
         self.view.addSubview(logoImage)
         self.view.addSubview(idTextField)
         self.view.addSubview(pwTextField)
         self.view.addSubview(loginBtn)
         self.view.addSubview(registerBtn)
         
+        
        setLayout()
         
     }
     
     func setLayout(){
+        
+        let strokeTextAttributes = [ //232,165,75
+            NSAttributedString.Key.strokeColor : UIColor(red: 232.0/255, green: 165.0/255, blue: 75.0/255, alpha: 1.0),
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeWidth : 8.0]
+            as [NSAttributedString.Key : Any]
+        
+        logoLabel.snp.makeConstraints { (make) in
+            logoLabel.attributedText = NSMutableAttributedString(string: "우리집 고양이가", attributes: strokeTextAttributes)
+            logoLabel.font = logoLabel.font.withSize(30)
+            make.leading.equalTo(self.view).offset(25)
+            make.trailing.equalTo(self.view).offset(-25)
+            make.top.equalTo(self.view).offset(80)
+        }
+        logoLabel_2.snp.makeConstraints { (make) in
+            logoLabel_2.attributedText = NSMutableAttributedString(string: "제일 귀여워", attributes: strokeTextAttributes)
+            logoLabel_2.font = logoLabel_2.font.withSize(30)
+            make.leading.equalTo(self.view).offset(25)
+            make.trailing.equalTo(self.view).offset(-25)
+            make.top.equalTo(self.logoLabel.snp_bottomMargin).offset(15)
+        }
+        
         logoImage.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
             make.height.equalTo(200)
-            make.top.equalTo(self.view.snp_topMargin).offset(75)
+            make.top.equalTo(self.view.snp_topMargin).offset(80)
         }
         
         idTextField.snp.makeConstraints { (make) in
             make.leading.equalTo(self.view).offset(20)
             make.trailing.equalTo(self.view).offset(-20)
             make.height.equalTo(45)
-            make.top.equalTo(logoImage.snp_bottomMargin).offset(25)
+            make.top.equalTo(logoImage.snp_bottomMargin).offset(0)
         }
         
         pwTextField.snp.makeConstraints { (make) in

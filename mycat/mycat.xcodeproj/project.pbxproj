@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C9AA96CBF0BB262CDF84ED6 /* Pods_mycat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022D19C12BD17065035003C9 /* Pods_mycat.framework */; };
 		B87363332286A7F600274E71 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363322286A7F600274E71 /* PinterestLayout.swift */; };
+		B87363352287C5E800274E71 /* Jalnan.otf in Resources */ = {isa = PBXBuildFile; fileRef = B87363342287C5DE00274E71 /* Jalnan.otf */; };
 		B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F901DB2280867F00D5F500 /* AppDelegate.swift */; };
 		B8F901E12280867F00D5F500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901DF2280867F00D5F500 /* Main.storyboard */; };
 		B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901E42280868000D5F500 /* LaunchScreen.storyboard */; };
@@ -28,6 +29,7 @@
 		8ECB8D0492F22DA3CDB61FDA /* Pods-mycat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mycat.release.xcconfig"; path = "Target Support Files/Pods-mycat/Pods-mycat.release.xcconfig"; sourceTree = "<group>"; };
 		940DEB269A5C17A6C311A698 /* Pods-mycat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mycat.debug.xcconfig"; path = "Target Support Files/Pods-mycat/Pods-mycat.debug.xcconfig"; sourceTree = "<group>"; };
 		B87363322286A7F600274E71 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		B87363342287C5DE00274E71 /* Jalnan.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Jalnan.otf; path = ../../../Downloads/Jalnan.otf; sourceTree = "<group>"; };
 		B8F901D82280867F00D5F500 /* mycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F901DB2280867F00D5F500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F901E02280867F00D5F500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		B8F901DA2280867F00D5F500 /* mycat */ = {
 			isa = PBXGroup;
 			children = (
+				B87363342287C5DE00274E71 /* Jalnan.otf */,
 				B8F9020A228567EB00D5F500 /* collection */,
 				B8F902062282E88900D5F500 /* tabBar */,
 				B8F901FB2281CB0100D5F500 /* controller */,
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */,
+				B87363352287C5E800274E71 /* Jalnan.otf in Resources */,
 				B8F901F62281BF5D00D5F500 /* Assets.xcassets in Resources */,
 				B8F901E12280867F00D5F500 /* Main.storyboard in Resources */,
 			);
