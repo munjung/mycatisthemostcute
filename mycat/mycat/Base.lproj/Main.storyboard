@@ -440,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67a-Fh-qFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4429.6000000000004" y="145.27736131934034"/>
+            <point key="canvasLocation" x="4430" y="161"/>
         </scene>
         <!--Test Main View Controller-->
         <scene sceneID="PIX-wR-rSw">
@@ -450,24 +450,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ic1-Fk-mqf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="166" translatesAutoresizingMaskIntoConstraints="NO" id="bpF-4v-poQ">
+                                        <rect key="frame" x="8" y="283" width="325" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ro7-UO-6KK">
+                                                <rect key="frame" x="0.0" y="0.0" width="97" height="32"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Z3B-Xt-2Sf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="B7M-km-JMV"/>
+                                                            <constraint firstAttribute="height" constant="32" id="Lzj-zJ-150"/>
+                                                            <constraint firstAttribute="width" secondItem="Z3B-Xt-2Sf" secondAttribute="height" multiplier="1:1" id="jBw-lG-CaR"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bp-Qp-ame">
+                                                        <rect key="frame" x="47" y="0.0" width="50" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-2f-Bpr">
+                                                <rect key="frame" x="263" y="0.0" width="62" height="32"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfO-sX-QL7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="3gh-fW-7c3"/>
+                                                            <constraint firstAttribute="height" constant="30" id="Vfb-jS-uN0"/>
+                                                        </constraints>
+                                                        <state key="normal" image="like-6"/>
+                                                        <state key="selected" image="like-6"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o76-lQ-ubx">
+                                                        <rect key="frame" x="35" y="0.0" width="27" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-UE-phx">
+                                        <rect key="frame" x="8" y="348" width="37" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iqy-Nt-Z5S">
                                 <rect key="frame" x="168" y="415" width="39" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-w0-1LR">
+                                <rect key="frame" x="279" y="41" width="72" height="40"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnClick:" destination="WHq-Zy-NTh" eventType="touchUpInside" id="JOP-Bx-LHI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ic1-Fk-mqf" firstAttribute="top" secondItem="ovm-w0-1LR" secondAttribute="bottom" id="1RI-sz-WGk"/>
+                            <constraint firstItem="sIO-kQ-nHb" firstAttribute="trailing" secondItem="ic1-Fk-mqf" secondAttribute="trailing" id="8OH-tT-DgH"/>
                             <constraint firstItem="iqy-Nt-Z5S" firstAttribute="centerX" secondItem="8dG-Ez-9nY" secondAttribute="centerX" id="Gk5-gk-RQ6"/>
+                            <constraint firstItem="ic1-Fk-mqf" firstAttribute="leading" secondItem="sIO-kQ-nHb" secondAttribute="leading" id="NmU-R4-UhE"/>
                             <constraint firstItem="iqy-Nt-Z5S" firstAttribute="centerY" secondItem="8dG-Ez-9nY" secondAttribute="centerY" multiplier="1.3" id="S51-B8-WmU"/>
+                            <constraint firstItem="iqy-Nt-Z5S" firstAttribute="top" secondItem="ic1-Fk-mqf" secondAttribute="bottom" id="iEH-Bk-1tK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sIO-kQ-nHb"/>
                     </view>
                     <connections>
+                        <outlet property="closeBtn" destination="ovm-w0-1LR" id="nID-4r-Vxi"/>
+                        <outlet property="likeBtn" destination="cfO-sX-QL7" id="DXS-mF-0Yh"/>
+                        <outlet property="likeCount" destination="o76-lQ-ubx" id="8fK-Hf-caZ"/>
                         <outlet property="pageControl" destination="iqy-Nt-Z5S" id="v4s-4R-YlB"/>
+                        <outlet property="scrollView" destination="ic1-Fk-mqf" id="KzN-mX-v3D"/>
+                        <outlet property="stackView" destination="bpF-4v-poQ" id="TMS-gp-0zT"/>
+                        <outlet property="userComment" destination="OPx-UE-phx" id="aPP-zn-myo"/>
+                        <outlet property="userID" destination="1Bp-Qp-ame" id="kXc-qJ-K7c"/>
+                        <outlet property="userIcon" destination="Z3B-Xt-2Sf" id="28L-XI-hwF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zai-b4-3r4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615" y="1014"/>
+            <point key="canvasLocation" x="4429.6000000000004" y="-1456.8215892053975"/>
         </scene>
         <!--Test Content View Controller-->
         <scene sceneID="gZ3-Rd-7Qg">
@@ -496,7 +572,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVY-F0-bPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4430" y="1012"/>
+            <point key="canvasLocation" x="5370" y="-1456"/>
         </scene>
         <!--Page Content View Controller-->
         <scene sceneID="qM7-D5-aqd">
@@ -525,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6w6-ab-cah" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5285" y="148"/>
+            <point key="canvasLocation" x="5330" y="161"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="uin-GL-Ilx">
@@ -533,7 +609,7 @@
                 <pageViewController storyboardIdentifier="pageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="6ag-Q6-eLr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF5-lS-tOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5284" y="1012"/>
+            <point key="canvasLocation" x="6262" y="-1456"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="GKq-HV-rF8">
@@ -630,8 +706,11 @@
         <image name="02" width="31" height="31"/>
         <image name="03" width="31" height="31"/>
         <image name="04" width="31" height="31"/>
+        <image name="close" width="40.601505279541016" height="40.601505279541016"/>
+        <image name="like-6" width="30.719999313354492" height="30.239999771118164"/>
         <image name="main_cat" width="200.16000366210938" height="200.16000366210938"/>
         <image name="threecat" width="310.07998657226562" height="200.16000366210938"/>
         <image name="title" width="310.07998657226562" height="200.16000366210938"/>
+        <image name="user" width="256" height="256"/>
     </resources>
 </document>

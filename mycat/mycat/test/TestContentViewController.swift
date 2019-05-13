@@ -7,18 +7,23 @@
 //
 
 import UIKit
-
+import SnapKit
 class TestContentViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
     var index: Int = 0
     var imgStr: String!
+    var imageSize: CGFloat = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         if let currentImage = imgStr{
             imageView.image = UIImage(named: currentImage)
+            self.imageSize = self.imageView.frame.height
+            print(imageSize)
+            //print(self.imageView.frame.height)
         }
+        
         // Do any additional setup after loading the view.
     }
     

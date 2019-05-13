@@ -46,7 +46,7 @@ class WriteViewController: UIViewController {
         
         navBar.snp.makeConstraints { (make) in
             make.left.equalTo(self.view)
-            make.top.equalTo(self.view).offset(10)
+            make.top.equalTo(UIApplication.shared.statusBarFrame.size.height)
             make.width.equalTo(self.view.frame.size.width)
             make.height.equalTo(80)
         }
@@ -70,7 +70,8 @@ class WriteViewController: UIViewController {
     
     
     @objc func backButtonClick() {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        //self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func okButtonClick() {
