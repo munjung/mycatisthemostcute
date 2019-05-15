@@ -17,22 +17,33 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var userIcon: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var userComment: UILabel!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
+    
     var pageViewController: UIPageViewController?
     var images = ["ex01","ex02","ex03"]
     var pendingIndex: Int?
-    var comment: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    var comment: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    
+    var isLikePhoto : Int = 0
+    var totalLikeCnt: Int = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.pageControl.numberOfPages = images.count
         createPageViewController()
         self.scrollView.delegate = self
-        self.scrollView.isDirectionalLockEnabled = true
-        // Do any additional setup after loading the view.
+        self.likeCount.text = String(self.totalLikeCnt)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isLikePhoto == 0 { //좋아요를 누르지 않은 상태일 때
+            likeBtn.setBackgroundImage(UIImage(named: "like_line"), for: .normal)
+        } else{
+            likeBtn.setBackgroundImage(UIImage(named: "like_solid"), for: .normal)
+        }
     }
     
     func getContentViewController(withIndex index: Int) -> TestContentViewController? {
@@ -60,21 +71,17 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
         pageViewController = pageController
         
         self.view.addSubview(scrollView)
-//        self.scrollView.addSubview(pageViewController!.view)
-//        self.scrollView.addSubview((pageControl))
-//        self.scrollView.addSubview(closeBtn)
-//        self.scrollView.addSubview(stackView)
-//        self.scrollView.addSubview(userComment)
-        
-        
         self.view.addSubview(pageViewController!.view)
         self.view.addSubview(pageControl)
         self.addChild(pageViewController!)
         self.view.addSubview(closeBtn)
         self.view.addSubview(stackView)
         self.view.addSubview(userComment)
-        //self.scrollView.addSubview(userComment)
-//        self.view.addSubview(userComment)
+        
+        scrollView.snp.makeConstraints { (make) in
+            make.top.left.bottom.right.equalTo(self.view)
+            scrollView.contentSize = self.view.bounds.size
+        }
         
         pageViewController!.view.snp.makeConstraints { (make) in
             make.top.left.width.equalTo(self.view)
@@ -83,7 +90,7 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
         
         closeBtn.snp.makeConstraints { (make) in
             make.top.equalTo(UIApplication.shared.statusBarFrame.size.height + 20)//.offset(10)
-            make.right.equalTo(self.view.snp_rightMargin).offset(-15)
+            make.right.equalTo(self.view.snp_rightMargin).offset(-10)
             make.width.equalTo(25)
             make.height.equalTo(25)
         }
@@ -93,16 +100,9 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
             make.top.equalTo(self.view).offset(50)
         }
         
-        scrollView.snp.makeConstraints { (make) in
-            make.top.left.bottom.right.equalTo(self.view)
-            //scrollView.contentSize = self.view.bounds.size
-        }
         stackView.snp.makeConstraints { (make) in
             make.leading.equalTo(10)
             make.trailing.equalTo(-10)
-            //print(pageViewController!.view.frame.height)
-            //print(pageViewController!.preferredContentSize.height)
-            //print(pageViewController!.view.frame.height)
             make.bottom.equalTo(self.view.snp_bottomMargin).offset(-self.view.frame.height/6)
             make.height.equalTo(30)
         }
@@ -129,8 +129,23 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
     }
     
     @IBAction func closeBtnClick(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func likeBtnClick(_ sender: Any) {
+        if isLikePhoto == 0 { //사진을 누르지 않았을 때 (빈 발바닥)
+            likeBtn.setBackgroundImage(UIImage(named: "like_solid"), for: .normal)
+            self.totalLikeCnt += 1
+            isLikePhoto = 1
+        } else {
+            likeBtn.setBackgroundImage(UIImage(named: "like_line"), for: .normal)
+            self.totalLikeCnt -= 1
+            isLikePhoto = 0
+        }
+        
+        self.likeCount.text = String(self.totalLikeCnt)
+    }
+    
     
 }
 extension TestMainViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {

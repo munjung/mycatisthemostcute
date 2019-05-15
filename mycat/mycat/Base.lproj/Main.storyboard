@@ -487,6 +487,9 @@
                                                         </constraints>
                                                         <state key="normal" image="like-6"/>
                                                         <state key="selected" image="like-6"/>
+                                                        <connections>
+                                                            <action selector="likeBtnClick:" destination="WHq-Zy-NTh" eventType="touchUpInside" id="eyL-VI-nVt"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o76-lQ-ubx">
                                                         <rect key="frame" x="35" y="0.0" width="27" height="32"/>
@@ -498,8 +501,8 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPx-UE-phx">
-                                        <rect key="frame" x="8" y="348" width="37" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx5-Wm-38P">
+                                        <rect key="frame" x="149" y="445" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -536,7 +539,7 @@
                         <outlet property="pageControl" destination="iqy-Nt-Z5S" id="v4s-4R-YlB"/>
                         <outlet property="scrollView" destination="ic1-Fk-mqf" id="KzN-mX-v3D"/>
                         <outlet property="stackView" destination="bpF-4v-poQ" id="TMS-gp-0zT"/>
-                        <outlet property="userComment" destination="OPx-UE-phx" id="aPP-zn-myo"/>
+                        <outlet property="userComment" destination="cx5-Wm-38P" id="nFn-0r-y9d"/>
                         <outlet property="userID" destination="1Bp-Qp-ame" id="kXc-qJ-K7c"/>
                         <outlet property="userIcon" destination="Z3B-Xt-2Sf" id="28L-XI-hwF"/>
                     </connections>

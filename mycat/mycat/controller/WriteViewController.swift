@@ -19,52 +19,9 @@ class WriteViewController: UIViewController {
         self.loadingActivity = UIActivityIndicatorView()
         self.loadingActivity.isHidden = true
         
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
-        let navItem = UINavigationItem(title: "글 쓰기")
-        let backItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: nil, action: #selector(backButtonClick))
-        let okItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(okButtonClick))
-        navItem.leftBarButtonItem = backItem
-        navItem.rightBarButtonItem = okItem
-        navBar.setItems([navItem], animated: false)
+        setNavigationBar()
+        setLayout()
         
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        toolBar.backgroundColor = UIColor.white
-        
-        var items = [UIBarButtonItem]()
-        
-        items.append( UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil) )
-        items.append( UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add)) )
-        toolBar.items = items
-        
-        
-        self.view.addSubview(navBar)
-        self.view.addSubview(toolBar)
-        self.view.addSubview(loadingActivity)
-        
-        
-        
-        navBar.snp.makeConstraints { (make) in
-            make.left.equalTo(self.view)
-            make.top.equalTo(UIApplication.shared.statusBarFrame.size.height)
-            make.width.equalTo(self.view.frame.size.width)
-            make.height.equalTo(80)
-        }
-        
-        toolBar.snp.makeConstraints { (make) in
-            make.left.equalTo(self.view)
-            make.bottom.equalTo(self.view)
-            make.width.equalTo(self.view.frame.size.width)
-            make.height.equalTo(50)
-        }
-    
-        loadingActivity.snp.makeConstraints { (make) in
-            loadingActivity.color = UIColor.yellow
-            make.width.equalTo(50)
-            make.height.equalTo(50)
-            make.centerX.equalTo(self.view)
-            make.centerY.equalTo(self.view)
-        }
         
     }
     
@@ -89,6 +46,55 @@ class WriteViewController: UIViewController {
         
     }
     
+    func setNavigationBar(){
+        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
+        let navItem = UINavigationItem(title: "글 쓰기")
+        let backItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: nil, action: #selector(backButtonClick))
+        let okItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(okButtonClick))
+        navItem.leftBarButtonItem = backItem
+        navItem.rightBarButtonItem = okItem
+        navBar.setItems([navItem], animated: false)
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        toolBar.backgroundColor = UIColor.white
+        
+        var items = [UIBarButtonItem]()
+        
+        items.append( UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil) )
+        items.append( UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add)) )
+        toolBar.items = items
+    }
+    
+    func setLayout(){
+        self.view.addSubview(navBar)
+        self.view.addSubview(toolBar)
+        self.view.addSubview(loadingActivity)
+        
+        
+        
+        navBar.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view)
+            make.top.equalTo(UIApplication.shared.statusBarFrame.size.height)
+            make.width.equalTo(self.view.frame.size.width)
+            make.height.equalTo(80)
+        }
+        
+        toolBar.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view)
+            make.bottom.equalTo(self.view)
+            make.width.equalTo(self.view.frame.size.width)
+            make.height.equalTo(50)
+        }
+        
+        loadingActivity.snp.makeConstraints { (make) in
+            loadingActivity.color = UIColor.yellow
+            make.width.equalTo(50)
+            make.height.equalTo(50)
+            make.centerX.equalTo(self.view)
+            make.centerY.equalTo(self.view)
+        }
+    }
     
     
 
