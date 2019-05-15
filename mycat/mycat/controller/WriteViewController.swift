@@ -12,6 +12,9 @@ import SnapKit
 class WriteViewController: UIViewController {
     
     var loadingActivity: UIActivityIndicatorView! // = UIActivityIndicatorView()
+    var writeTextView: UITextView!
+    var navBar: UINavigationBar!
+    var placeholderLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,30 +50,46 @@ class WriteViewController: UIViewController {
     }
     
     func setNavigationBar(){
-        let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
+        navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 0))
         let navItem = UINavigationItem(title: "글 쓰기")
         let backItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: nil, action: #selector(backButtonClick))
         let okItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(okButtonClick))
         navItem.leftBarButtonItem = backItem
         navItem.rightBarButtonItem = okItem
         navBar.setItems([navItem], animated: false)
-        
-        let toolBar = UIToolbar()
-        toolBar.sizeToFit()
-        toolBar.backgroundColor = UIColor.white
-        
-        var items = [UIBarButtonItem]()
-        
-        items.append( UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil) )
-        items.append( UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add)) )
-        toolBar.items = items
+
     }
     
     func setLayout(){
-        self.view.addSubview(navBar)
-        self.view.addSubview(toolBar)
-        self.view.addSubview(loadingActivity)
+
+        writeTextView = UITextView()
+    
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "당신의 고양이를 마음껏 자랑해주세요~~~!"
+        placeholderLabel.sizeToFit()
+        placeholderLabel.font = placeholderLabel.font.withSize(18)
         
+        self.view.addSubview(navBar)
+        self.view.addSubview(loadingActivity)
+        self.view.addSubview(writeTextView)
+        self.writeTextView.addSubview(placeholderLabel)
+        
+        placeholderLabel.textColor = UIColor.lightGray
+        placeholderLabel.isHidden = !writeTextView.text.isEmpty
+        
+        writeTextView.delegate = self
+        writeTextView.isScrollEnabled = true
+        writeTextView.font = .systemFont(ofSize: 15)
+    
+        let toolBarKeyboard = UIToolbar()
+        toolBarKeyboard.sizeToFit()
+        let spaceBar =  UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let btnDoneBar = UIBarButtonItem(title: "", style: .done, target: self, action: #selector(self.backButtonClick))
+        
+        btnDoneBar.setBackgroundImage(UIImage(named: "camera_resize_30"), for: .normal, barMetrics: .default)
+        toolBarKeyboard.items = [spaceBar, btnDoneBar]
+        writeTextView.inputAccessoryView = toolBarKeyboard
+        writeTextView.becomeFirstResponder()
         
         
         navBar.snp.makeConstraints { (make) in
@@ -80,11 +99,12 @@ class WriteViewController: UIViewController {
             make.height.equalTo(80)
         }
         
-        toolBar.snp.makeConstraints { (make) in
-            make.left.equalTo(self.view)
-            make.bottom.equalTo(self.view)
-            make.width.equalTo(self.view.frame.size.width)
+        writeTextView.snp.makeConstraints { (make) in
+            make.leading.equalTo(self.view).offset(20)
+            make.trailing.equalTo(self.view).offset(-20)
+            make.top.equalTo(self.navBar.snp_bottomMargin)
             make.height.equalTo(50)
+            writeTextView.backgroundColor = UIColor.gray
         }
         
         loadingActivity.snp.makeConstraints { (make) in
@@ -108,4 +128,17 @@ class WriteViewController: UIViewController {
     }
     */
 
+}
+
+extension WriteViewController: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        textView.constraints.forEach { (constraint) in
+            if constraint.firstAttribute == .height {
+                constraint.constant = estimatedSize.height
+            }
+        }
+    }
 }
