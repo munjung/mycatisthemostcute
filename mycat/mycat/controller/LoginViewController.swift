@@ -67,8 +67,9 @@ class LoginViewController: UIViewController {
             make.top.equalTo(self.view.snp_topMargin).offset(15)
         }
         logoImage.snp.makeConstraints { (make) in
-            make.leading.equalTo(self.view).offset(20)
-            make.trailing.equalTo(self.view).offset(-20)
+//            make.leading.equalTo(self.view).offset(20)
+//            make.trailing.equalTo(self.view).offset(-20)
+            make.centerX.equalTo(self.view)
             make.height.equalTo(200)
             make.top.equalTo(self.view.snp_topMargin).offset(80)
         }

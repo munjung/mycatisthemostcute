@@ -515,7 +515,7 @@
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-w0-1LR">
                                 <rect key="frame" x="279" y="41" width="72" height="40"/>
-                                <state key="normal" image="close"/>
+                                <state key="normal" image="cancel"/>
                                 <connections>
                                     <action selector="closeBtnClick:" destination="WHq-Zy-NTh" eventType="touchUpInside" id="JOP-Bx-LHI"/>
                                 </connections>
@@ -709,7 +709,7 @@
         <image name="02" width="31" height="31"/>
         <image name="03" width="31" height="31"/>
         <image name="04" width="31" height="31"/>
-        <image name="close" width="40.601505279541016" height="40.601505279541016"/>
+        <image name="cancel" width="7.1999998092651367" height="7.1999998092651367"/>
         <image name="like-6" width="30.719999313354492" height="30.239999771118164"/>
         <image name="main_cat" width="200.16000366210938" height="200.16000366210938"/>
         <image name="threecat" width="310.07998657226562" height="200.16000366210938"/>
