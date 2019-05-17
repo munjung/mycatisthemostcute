@@ -19,7 +19,6 @@ class WriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        
         self.loadingActivity = UIActivityIndicatorView()
         self.loadingActivity.isHidden = true
         self.loadingActivity.assignColor(UIColor(red: 241/255.0, green: 170/255.0, blue: 73/255.0, alpha: 1.0))
@@ -69,6 +68,7 @@ class WriteViewController: UIViewController {
         navItem.leftBarButtonItem = backItem
         navItem.rightBarButtonItem = okItem
         navBar.setItems([navItem], animated: false)
+        
 
     }
     
@@ -96,10 +96,10 @@ class WriteViewController: UIViewController {
         let toolBarKeyboard = UIToolbar()
         toolBarKeyboard.sizeToFit()
         let spaceBar =  UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let btnDoneBar = UIBarButtonItem(title: "", style: .done, target: self, action: #selector(self.backButtonClick))
+        let cameraBtnBar = UIBarButtonItem(title: "", style: .done, target: self, action: #selector(cameraBtnClick))
         
-        btnDoneBar.setBackgroundImage(UIImage(named: "camera"), for: .normal, barMetrics: .default)
-        toolBarKeyboard.items = [spaceBar, btnDoneBar]
+        cameraBtnBar.setBackgroundImage(UIImage(named: "camera"), for: .normal, barMetrics: .default)
+        toolBarKeyboard.items = [spaceBar, cameraBtnBar]
         writeTextView.inputAccessoryView = toolBarKeyboard
         
         
@@ -129,6 +129,11 @@ class WriteViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
          self.view.endEditing(true)
+    }
+    
+    @objc func cameraBtnClick() {
+       
+        
     }
 
 }

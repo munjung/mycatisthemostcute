@@ -13,10 +13,12 @@
 		B87363372287EF9400274E71 /* UserContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363362287EF9400274E71 /* UserContentViewController.swift */; };
 		B873633A228803D000274E71 /* Content.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8736339228803D000274E71 /* Content.xib */; };
 		B873633C2288043300274E71 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873633B2288043300274E71 /* Content.swift */; };
-		B873634022887CCE00274E71 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B873633F22887CCE00274E71 /* PageContentViewController.swift */; };
-		B87363432288898200274E71 /* PageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363422288898200274E71 /* PageMainViewController.swift */; };
 		B87363472288926000274E71 /* TestContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87363462288926000274E71 /* TestContentViewController.swift */; };
 		B8736349228893A900274E71 /* TestMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8736348228893A900274E71 /* TestMainViewController.swift */; };
+		B8E1FA8B228E627F00B63A45 /* AlbumCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA8A228E627F00B63A45 /* AlbumCollectionViewController.swift */; };
+		B8E1FA8D228E639100B63A45 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */; };
+		B8E1FA8F228E67EE00B63A45 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */; };
+		B8E1FA93228E6FAA00B63A45 /* CustomSegueClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA92228E6FAA00B63A45 /* CustomSegueClass.swift */; };
 		B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F901DB2280867F00D5F500 /* AppDelegate.swift */; };
 		B8F901E12280867F00D5F500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901DF2280867F00D5F500 /* Main.storyboard */; };
 		B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901E42280868000D5F500 /* LaunchScreen.storyboard */; };
@@ -40,10 +42,12 @@
 		B87363362287EF9400274E71 /* UserContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentViewController.swift; sourceTree = "<group>"; };
 		B8736339228803D000274E71 /* Content.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Content.xib; sourceTree = "<group>"; };
 		B873633B2288043300274E71 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
-		B873633F22887CCE00274E71 /* PageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
-		B87363422288898200274E71 /* PageMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMainViewController.swift; sourceTree = "<group>"; };
 		B87363462288926000274E71 /* TestContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestContentViewController.swift; sourceTree = "<group>"; };
 		B8736348228893A900274E71 /* TestMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMainViewController.swift; sourceTree = "<group>"; };
+		B8E1FA8A228E627F00B63A45 /* AlbumCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewController.swift; sourceTree = "<group>"; };
+		B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B8E1FA92228E6FAA00B63A45 /* CustomSegueClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueClass.swift; sourceTree = "<group>"; };
 		B8F901D82280867F00D5F500 /* mycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F901DB2280867F00D5F500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F901E02280867F00D5F500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,10 +97,9 @@
 		B873634122887D3100274E71 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				B873633F22887CCE00274E71 /* PageContentViewController.swift */,
-				B87363422288898200274E71 /* PageMainViewController.swift */,
 				B87363462288926000274E71 /* TestContentViewController.swift */,
 				B8736348228893A900274E71 /* TestMainViewController.swift */,
+				B8E1FA92228E6FAA00B63A45 /* CustomSegueClass.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -164,6 +167,9 @@
 			children = (
 				B8F9020B2285680600D5F500 /* ContentCollectionViewCell.swift */,
 				B87363322286A7F600274E71 /* PinterestLayout.swift */,
+				B8E1FA8A228E627F00B63A45 /* AlbumCollectionViewController.swift */,
+				B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */,
+				B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */,
 			);
 			path = collection;
 			sourceTree = "<group>";
@@ -298,21 +304,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E1FA8D228E639100B63A45 /* AlbumCollectionViewCell.swift in Sources */,
+				B8E1FA8B228E627F00B63A45 /* AlbumCollectionViewController.swift in Sources */,
+				B8E1FA8F228E67EE00B63A45 /* TestViewController.swift in Sources */,
 				B87363332286A7F600274E71 /* PinterestLayout.swift in Sources */,
 				B8F901FD2282E65D00D5F500 /* MainTabBarViewController.swift in Sources */,
 				B8F901F82281C2E200D5F500 /* RegisterViewController.swift in Sources */,
-				B873634022887CCE00274E71 /* PageContentViewController.swift in Sources */,
 				B87363472288926000274E71 /* TestContentViewController.swift in Sources */,
 				B8F901F22281B89D00D5F500 /* LoginViewController.swift in Sources */,
 				B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */,
 				B8F902002282E6F100D5F500 /* ContentViewController.swift in Sources */,
 				B8F901FA2281CAFC00D5F500 /* MainViewController.swift in Sources */,
+				B8E1FA93228E6FAA00B63A45 /* CustomSegueClass.swift in Sources */,
 				B8F902022282E6FA00D5F500 /* WriteViewController.swift in Sources */,
 				B8F902042282E70300D5F500 /* MypageViewController.swift in Sources */,
 				B8736349228893A900274E71 /* TestMainViewController.swift in Sources */,
 				B87363372287EF9400274E71 /* UserContentViewController.swift in Sources */,
 				B8F9020C2285680600D5F500 /* ContentCollectionViewCell.swift in Sources */,
-				B87363432288898200274E71 /* PageMainViewController.swift in Sources */,
 				B873633C2288043300274E71 /* Content.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

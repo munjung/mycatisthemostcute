@@ -1,21 +1,18 @@
 //
-//  PageContentViewController.swift
+//  TestViewController.swift
 //  mycat
 //
-//  Created by MOONJUNG on 13/05/2019.
+//  Created by MOONJUNG on 17/05/2019.
 //  Copyright © 2019 MOONJUNG. All rights reserved.
 //
 
 import UIKit
 
-class PageContentViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
-    
-    var index: Int!
-    var imgStr: String!
+class TestViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageView.image = UIImage(named: imgStr)
+        self.view.backgroundColor = UIColor.black
         // Do any additional setup after loading the view.
     }
     
