@@ -569,14 +569,72 @@
                     <view key="view" contentMode="scaleToFill" id="mUO-O8-hd4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJs-m0-jCL">
+                                <rect key="frame" x="147" y="30" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gum-6Q-1db">
+                                <rect key="frame" x="16" y="118" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="좋아요 글"/>
+                                    <segment title="내가쓴 글"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="psi-DG-fIK">
+                                <rect key="frame" x="16" y="165" width="343" height="453"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nFu-BI-0Z1">
+                                    <size key="itemSize" width="165" height="161"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mypageCell" id="cG1-LW-AJT" customClass="MypageCollectionViewCell" customModule="mycat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="161"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="161"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xsp-GD-6BK">
+                                                    <rect key="frame" x="8" y="28" width="149" height="125"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="leading" secondItem="cG1-LW-AJT" secondAttribute="leadingMargin" id="OKS-56-onh"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Xsp-GD-6BK" secondAttribute="bottom" id="jic-mJ-CVa"/>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="top" secondItem="cG1-LW-AJT" secondAttribute="topMargin" id="kdO-4x-AK2"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Xsp-GD-6BK" secondAttribute="trailing" id="qfq-oT-Sdy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Xsp-GD-6BK" id="5aK-zZ-Rfz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gf1-P2-H18" id="GJE-Hi-Ctw"/>
+                                    <outlet property="delegate" destination="Gf1-P2-H18" id="LLw-6i-bFp"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="S4o-yu-aLm"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="04" selectedImage="04" id="ENt-GQ-Dyr"/>
+                    <connections>
+                        <outlet property="mypageCollectionView" destination="psi-DG-fIK" id="2SS-uA-geH"/>
+                        <outlet property="segmentControl" destination="gum-6Q-1db" id="WAk-S9-NAj"/>
+                        <outlet property="userImageView" destination="uJs-m0-jCL" id="1uO-f4-nLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUv-qp-yaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="804"/>
+            <point key="canvasLocation" x="2676" y="803.74812593703155"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z4c-ce-Atg">

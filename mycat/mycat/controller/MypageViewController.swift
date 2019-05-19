@@ -7,23 +7,38 @@
 //
 
 import UIKit
+import SnapKit
 
 class MypageViewController: UIViewController {
+    
+    let cellIdentifler: String  = "mypageCell"
 
+    @IBOutlet weak var mypageCollectionView: UICollectionView!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setLayout();
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setLayout(){
+        
     }
-    */
 
+}
+
+extension MypageViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: MypageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellIdentifler, for: indexPath) as! MypageCollectionViewCell
+//        cell.catImages.image = images[indexPath.item]
+//        cell.layer.cornerRadius = 10.0
+        return cell
+    }
+    
+    
 }

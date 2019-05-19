@@ -19,6 +19,7 @@
 		B8E1FA8D228E639100B63A45 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */; };
 		B8E1FA8F228E67EE00B63A45 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */; };
 		B8E1FA93228E6FAA00B63A45 /* CustomSegueClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA92228E6FAA00B63A45 /* CustomSegueClass.swift */; };
+		B8E1FA9522918DDB00B63A45 /* MypageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E1FA9422918DDB00B63A45 /* MypageCollectionViewCell.swift */; };
 		B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F901DB2280867F00D5F500 /* AppDelegate.swift */; };
 		B8F901E12280867F00D5F500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901DF2280867F00D5F500 /* Main.storyboard */; };
 		B8F901E62280868000D5F500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F901E42280868000D5F500 /* LaunchScreen.storyboard */; };
@@ -48,6 +49,7 @@
 		B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B8E1FA92228E6FAA00B63A45 /* CustomSegueClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueClass.swift; sourceTree = "<group>"; };
+		B8E1FA9422918DDB00B63A45 /* MypageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8F901D82280867F00D5F500 /* mycat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mycat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F901DB2280867F00D5F500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8F901E02280867F00D5F500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				B8E1FA8A228E627F00B63A45 /* AlbumCollectionViewController.swift */,
 				B8E1FA8C228E639100B63A45 /* AlbumCollectionViewCell.swift */,
 				B8E1FA8E228E67EE00B63A45 /* TestViewController.swift */,
+				B8E1FA9422918DDB00B63A45 /* MypageCollectionViewCell.swift */,
 			);
 			path = collection;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				B8F901DC2280867F00D5F500 /* AppDelegate.swift in Sources */,
 				B8F902002282E6F100D5F500 /* ContentViewController.swift in Sources */,
 				B8F901FA2281CAFC00D5F500 /* MainViewController.swift in Sources */,
+				B8E1FA9522918DDB00B63A45 /* MypageCollectionViewCell.swift in Sources */,
 				B8E1FA93228E6FAA00B63A45 /* CustomSegueClass.swift in Sources */,
 				B8F902022282E6FA00D5F500 /* WriteViewController.swift in Sources */,
 				B8F902042282E70300D5F500 /* MypageViewController.swift in Sources */,
