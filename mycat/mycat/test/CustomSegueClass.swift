@@ -24,7 +24,7 @@ class CustomSegueClass: UIStoryboardSegue {
                         src.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width/3, y: 0)
         },
                        completion: { finished in
-                        src.present(dst, animated: false, completion: nil)
+                        src.present(dst, animated: true, completion: nil)
         }
         )
     }

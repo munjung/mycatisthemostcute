@@ -581,20 +581,23 @@
                                     <segment title="좋아요 글"/>
                                     <segment title="내가쓴 글"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentContorolClick:" destination="Gf1-P2-H18" eventType="valueChanged" id="0lO-tk-frl"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="psi-DG-fIK">
                                 <rect key="frame" x="16" y="165" width="343" height="453"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nFu-BI-0Z1">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="nFu-BI-0Z1">
                                     <size key="itemSize" width="165" height="161"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mypageCell" id="cG1-LW-AJT" customClass="MypageCollectionViewCell" customModule="mycat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="165" height="161"/>
+                                        <rect key="frame" x="89" y="10" width="165" height="161"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="165" height="161"/>
@@ -606,10 +609,14 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="top" secondItem="cG1-LW-AJT" secondAttribute="topMargin" id="39x-Hd-NSG"/>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="leading" secondItem="cG1-LW-AJT" secondAttribute="leadingMargin" id="KNQ-8Q-7ZW"/>
                                             <constraint firstItem="Xsp-GD-6BK" firstAttribute="leading" secondItem="cG1-LW-AJT" secondAttribute="leadingMargin" id="OKS-56-onh"/>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="bottom" secondItem="cG1-LW-AJT" secondAttribute="bottomMargin" id="U2w-an-hNh"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="Xsp-GD-6BK" secondAttribute="bottom" id="jic-mJ-CVa"/>
                                             <constraint firstItem="Xsp-GD-6BK" firstAttribute="top" secondItem="cG1-LW-AJT" secondAttribute="topMargin" id="kdO-4x-AK2"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="Xsp-GD-6BK" secondAttribute="trailing" id="qfq-oT-Sdy"/>
+                                            <constraint firstItem="Xsp-GD-6BK" firstAttribute="trailing" secondItem="cG1-LW-AJT" secondAttribute="trailingMargin" id="tOj-LE-UC8"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Xsp-GD-6BK" id="5aK-zZ-Rfz"/>

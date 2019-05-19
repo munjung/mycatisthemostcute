@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SnapKit
 
 class MypageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
 }
