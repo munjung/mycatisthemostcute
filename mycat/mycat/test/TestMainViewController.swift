@@ -129,7 +129,7 @@ class TestMainViewController: UIViewController,UIScrollViewDelegate {
     }
     
     @IBAction func closeBtnClick(_ sender: Any) {
-    self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func likeBtnClick(_ sender: Any) {

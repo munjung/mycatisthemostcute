@@ -620,6 +620,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Xsp-GD-6BK" id="5aK-zZ-Rfz"/>
+                                            <segue destination="WHq-Zy-NTh" kind="show" id="DCU-gg-idW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -673,4 +674,7 @@
         <image name="title" width="310.07998657226562" height="200.16000366210938"/>
         <image name="user" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DCU-gg-idW"/>
+    </inferredMetricsTieBreakers>
 </document>
